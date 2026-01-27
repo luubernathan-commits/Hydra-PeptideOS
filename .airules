@@ -1,0 +1,40 @@
+# AI Development Rules: Hydra PeptideOS
+
+## System Thought Process
+* Maintain Thought Signatures: When refactoring, always reference the original architecture analysis before making changes.
+* Agentic Permission: You are authorized to run npm/pnpm commands, initialize Firebase services, create/modify files, and configure deployment.
+* Preserve Intent: Keep the existing IStorage interface pattern when implementing Firestore.
+
+## Tech Stack & Standards
+* Frontend: React 18+ with Vite, TypeScript strict mode
+* Routing: Wouter (do not migrate to React Router)
+* Data Fetching: TanStack React Query (QueryClientProvider)
+* UI Components: Shadcn UI (components.json configured)
+* Styling: Tailwind CSS with samurai armor theme - Primary: Crimson Red #DC143C, Secondary: Fiery Orange #FF4500, Gradient: #8B0000 to #FF6B35
+* Icons: Lucide React
+* Validation: Zod schemas
+* Code Style: Functional components, hooks, TypeScript strict
+
+## Firebase Migration Specifics
+* Replace server/storage.ts MemStorage class with FirestoreStorage class
+* Keep the IStorage interface unchanged
+* Firestore Collections: users (id, username, passwordHash, createdAt), waitlist (id, email, createdAt, status)
+* Implement Firebase Auth for user authentication
+* Migrate server/routes.ts Express endpoints to Cloud Functions
+
+## Security & Data Guardrails
+* Firestore Rules: Never use allow all. Implement owner-based access for users, create-only for waitlist
+* Environment Variables: Use .env.local for Firebase config
+* Passwords: NEVER store plain text. Use Firebase Auth exclusively.
+
+## Deployment
+* Frontend: Firebase Hosting with Vite build output (dist/)
+* Backend: Cloud Functions for API endpoints
+* Database: Cloud Firestore (production mode)
+* Region: australia-southeast1
+
+## Constraints
+* DO NOT remove existing Shadcn UI components
+* PRESERVE the samurai armor color theme
+* KEEP WaitlistForm and FeaturesSection functionality
+* DO NOT change wouter routing
