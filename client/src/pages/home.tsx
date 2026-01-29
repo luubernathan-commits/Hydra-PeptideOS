@@ -5,6 +5,12 @@ import { WaitlistForm } from "@/components/waitlist-form";
 import { FeaturesSection } from "@/components/ui/features-section";
 import { GradientText } from "@/components/ui/gradient-text";
 import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import {
   Check,
   Sparkles,
   Lock,
@@ -12,6 +18,10 @@ import {
   FlaskConical,
   Users,
   Sword,
+  MapPin,
+  FileText,
+  HelpCircle,
+  Cpu,
 } from "lucide-react";
 
 const trustBadges = [
@@ -151,24 +161,98 @@ export default function Home() {
               </p>
 
               <div className="grid gap-6 sm:grid-cols-3">
-                <Card className="bg-card border-card-border p-6 text-center">
-                  <div className="mb-2 text-3xl font-bold">
-                    <GradientText>12,000+</GradientText>
-                  </div>
-                  <p className="text-sm text-muted-foreground" data-testid="stat-papers">Research papers analyzed</p>
-                </Card>
-                <Card className="bg-card border-card-border p-6 text-center">
-                  <div className="mb-2 text-3xl font-bold">
-                    <GradientText>40+</GradientText>
-                  </div>
-                  <p className="text-sm text-muted-foreground" data-testid="stat-biomarkers">Biomarkers tracked</p>
-                </Card>
-                <Card className="bg-card border-card-border p-6 text-center">
-                  <div className="mb-2 text-3xl font-bold">
-                    <GradientText>97%</GradientText>
-                  </div>
-                  <p className="text-sm text-muted-foreground" data-testid="stat-accuracy">Protocol accuracy rate</p>
-                </Card>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Card className="bg-card border-card-border p-6 text-center cursor-help transition-all hover:border-primary/40 hover:shadow-[0_0_20px_rgba(220,20,60,0.15)]">
+                        <div className="mb-2 text-3xl font-bold">
+                          <GradientText>12,000+</GradientText>
+                        </div>
+                        <p className="text-sm text-muted-foreground" data-testid="stat-papers">Research papers analyzed</p>
+                      </Card>
+                    </TooltipTrigger>
+                    <TooltipContent side="bottom" className="max-w-xs p-4 space-y-2">
+                      <div className="flex items-start gap-2">
+                        <MapPin className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                        <p className="text-sm"><span className="font-semibold">Where:</span> PubMed database and clinical research repositories</p>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <FileText className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                        <p className="text-sm"><span className="font-semibold">What:</span> Comprehensive analysis of peer-reviewed studies</p>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <HelpCircle className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                        <p className="text-sm"><span className="font-semibold">Why:</span> Evidence-based protocol recommendations</p>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <Cpu className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                        <p className="text-sm"><span className="font-semibold">How:</span> AI-powered natural language processing of research abstracts</p>
+                      </div>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Card className="bg-card border-card-border p-6 text-center cursor-help transition-all hover:border-primary/40 hover:shadow-[0_0_20px_rgba(220,20,60,0.15)]">
+                        <div className="mb-2 text-3xl font-bold">
+                          <GradientText>40+</GradientText>
+                        </div>
+                        <p className="text-sm text-muted-foreground" data-testid="stat-biomarkers">Biomarkers tracked</p>
+                      </Card>
+                    </TooltipTrigger>
+                    <TooltipContent side="bottom" className="max-w-xs p-4 space-y-2">
+                      <div className="flex items-start gap-2">
+                        <MapPin className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                        <p className="text-sm"><span className="font-semibold">Where:</span> eVOLT360 body composition + Performance Athlete labs</p>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <FileText className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                        <p className="text-sm"><span className="font-semibold">What:</span> IGF-1, hs-CRP, HOMA-IR, visceral fat, hormones, inflammatory markers</p>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <HelpCircle className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                        <p className="text-sm"><span className="font-semibold">Why:</span> Validate peptide efficacy with objective data</p>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <Cpu className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                        <p className="text-sm"><span className="font-semibold">How:</span> Automated lab integration with trend analysis</p>
+                      </div>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Card className="bg-card border-card-border p-6 text-center cursor-help transition-all hover:border-primary/40 hover:shadow-[0_0_20px_rgba(220,20,60,0.15)]">
+                        <div className="mb-2 text-3xl font-bold">
+                          <GradientText>97%</GradientText>
+                        </div>
+                        <p className="text-sm text-muted-foreground" data-testid="stat-accuracy">Protocol accuracy rate</p>
+                      </Card>
+                    </TooltipTrigger>
+                    <TooltipContent side="bottom" className="max-w-xs p-4 space-y-2">
+                      <div className="flex items-start gap-2">
+                        <MapPin className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                        <p className="text-sm"><span className="font-semibold">Where:</span> Based on longitudinal patient outcomes</p>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <FileText className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                        <p className="text-sm"><span className="font-semibold">What:</span> Successful protocol adherence and biomarker improvements</p>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <HelpCircle className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                        <p className="text-sm"><span className="font-semibold">Why:</span> Continuous AI model refinement from real-world results</p>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <Cpu className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                        <p className="text-sm"><span className="font-semibold">How:</span> Machine learning feedback loop with practitioner validation</p>
+                      </div>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
               </div>
             </div>
           </div>
