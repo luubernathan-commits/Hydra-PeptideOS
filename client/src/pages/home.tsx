@@ -164,7 +164,7 @@ export default function Home() {
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <Card className="bg-card border-card-border p-6 text-center cursor-help transition-all hover:border-primary/40 hover:shadow-[0_0_20px_rgba(220,20,60,0.15)]">
+                      <Card className="bg-card border-card-border p-6 text-center cursor-help transition-all hover:border-primary/40 hover:shadow-[0_0_20px_rgba(220,20,60,0.15)]" title="WHERE: PubMed database | WHAT: Comprehensive analysis of peer-reviewed studies | WHY: Evidence-based protocol development | HOW: AI-powered natural language processing">
                         <div className="mb-2 text-3xl font-bold">
                           <GradientText>12,000+</GradientText>
                         </div>
