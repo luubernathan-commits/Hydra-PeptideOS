@@ -168,7 +168,7 @@ export default function Home() {
                       <Card className="bg-card border-card-border p-6 text-center cursor-help transition-all hover:border-primary/40 hover:shadow-[0_0_20px_rgba(220,20,60,0.15)]" title="WHERE: PubMed database | WHAT: Comprehensive analysis of peer-reviewed studies | WHY: Evidence-based protocol development | HOW: AI-powered natural language processing">
                         <div className="flex items-center justify-center gap-2 mb-2 text-3xl font-bold">
                     <GradientText>12,000+</GradientText>
-                    <Info className="h-5 w-5 text-primary cursor-help" />
+                    <Info className="h-5 w-5 text-primary cursor-help border border-primary/50 rounded-full p-0.5 bg-primary/10" />
                   </div>
                         <p className="text-sm text-muted-foreground" data-testid="stat-papers">Research papers analyzed</p>
                       </Card>
@@ -200,7 +200,7 @@ export default function Home() {
                       <Card className="bg-card border-card-border p-6 text-center cursor-help transition-all hover:border-primary/40 hover:shadow-[0_0_20px_rgba(220,20,60,0.15)]">
                         <div className="flex items-center justify-center gap-2 mb-2 text-3xl font-bold">
                     <GradientText>40+</GradientText>
-                    <Info className="h-5 w-5 text-primary cursor-help" />
+                    <Info className="h-5 w-5 text-primary cursor-help border border-primary/50 rounded-full p-0.5 bg-primary/10" />
                   </div>
                         <p className="text-sm text-muted-foreground" data-testid="stat-biomarkers">Biomarkers tracked</p>
                       </Card>
@@ -232,7 +232,7 @@ export default function Home() {
                       <Card className="bg-card border-card-border p-6 text-center cursor-help transition-all hover:border-primary/40 hover:shadow-[0_0_20px_rgba(220,20,60,0.15)]">
                         <div className="flex items-center justify-center gap-2 mb-2 text-3xl font-bold">
                     <GradientText>97%</GradientText>
-                    <Info className="h-5 w-5 text-primary cursor-help" />
+                    <Info className="h-5 w-5 text-primary cursor-help border border-primary/50 rounded-full p-0.5 bg-primary/10" />
                   </div>
                         <p className="text-sm text-muted-foreground" data-testid="stat-accuracy">Protocol accuracy rate</p>
                       </Card>
