@@ -167,7 +167,7 @@ export default function Home() {
                     <TooltipTrigger asChild>
                       <Card className="bg-card border-card-border p-6 text-center cursor-help transition-all hover:border-primary/40 hover:shadow-[0_0_20px_rgba(220,20,60,0.15)]" title="WHERE: PubMed database | WHAT: Comprehensive analysis of peer-reviewed studies | WHY: Evidence-based protocol development | HOW: AI-powered natural language processing">
                         <div className="flex items-center justify-center gap-2 mb-2 text-3xl font-bold">
-                    <GradientText>12,000+</GradientText>
+                    <GradientText>12,000+ (i)</GradientText>
                     <span className="ml-1 text-xs text-primary border border-primary/50 rounded-full px-1.5 py-0.5 bg-primary/10 cursor-help">i</span>
                   </div>
                         <p className="text-sm text-muted-foreground" data-testid="stat-papers">Research papers analyzed</p>
@@ -199,7 +199,7 @@ export default function Home() {
                     <TooltipTrigger asChild>
                       <Card className="bg-card border-card-border p-6 text-center cursor-help transition-all hover:border-primary/40 hover:shadow-[0_0_20px_rgba(220,20,60,0.15)]">
                         <div className="flex items-center justify-center gap-2 mb-2 text-3xl font-bold">
-                    <GradientText>40+</GradientText>
+                    <GradientText>40+ (i)</GradientText>
                     <span className="ml-1 text-xs text-primary border border-primary/50 rounded-full px-1.5 py-0.5 bg-primary/10 cursor-help">i</span>
                   </div>
                         <p className="text-sm text-muted-foreground" data-testid="stat-biomarkers">Biomarkers tracked</p>
@@ -231,7 +231,7 @@ export default function Home() {
                     <TooltipTrigger asChild>
                       <Card className="bg-card border-card-border p-6 text-center cursor-help transition-all hover:border-primary/40 hover:shadow-[0_0_20px_rgba(220,20,60,0.15)]">
                         <div className="flex items-center justify-center gap-2 mb-2 text-3xl font-bold">
-                    <GradientText>97%</GradientText>
+                    <GradientText>97% (i)</GradientText>
                     <span className="ml-1 text-xs text-primary border border-primary/50 rounded-full px-1.5 py-0.5 bg-primary/10 cursor-help">i</span>
                   </div>
                         <p className="text-sm text-muted-foreground" data-testid="stat-accuracy">Protocol accuracy rate</p>
