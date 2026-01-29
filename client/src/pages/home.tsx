@@ -22,6 +22,7 @@ import {
   FileText,
   HelpCircle,
   Cpu,
+  Info,
 } from "lucide-react";
 
 const trustBadges = [
@@ -165,9 +166,10 @@ export default function Home() {
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <Card className="bg-card border-card-border p-6 text-center cursor-help transition-all hover:border-primary/40 hover:shadow-[0_0_20px_rgba(220,20,60,0.15)]" title="WHERE: PubMed database | WHAT: Comprehensive analysis of peer-reviewed studies | WHY: Evidence-based protocol development | HOW: AI-powered natural language processing">
-                        <div className="mb-2 text-3xl font-bold">
-                          <GradientText>12,000+</GradientText>
-                        </div>
+                        <div className="flex items-center justify-center gap-2 mb-2 text-3xl font-bold">
+                    <GradientText>12,000+</GradientText>
+                    <Info className="h-5 w-5 text-muted-foreground cursor-help" />
+                  </div>
                         <p className="text-sm text-muted-foreground" data-testid="stat-papers">Research papers analyzed</p>
                       </Card>
                     </TooltipTrigger>
@@ -196,9 +198,10 @@ export default function Home() {
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <Card className="bg-card border-card-border p-6 text-center cursor-help transition-all hover:border-primary/40 hover:shadow-[0_0_20px_rgba(220,20,60,0.15)]">
-                        <div className="mb-2 text-3xl font-bold">
-                          <GradientText>40+</GradientText>
-                        </div>
+                        <div className="flex items-center justify-center gap-2 mb-2 text-3xl font-bold">
+                    <GradientText>40+</GradientText>
+                    <Info className="h-5 w-5 text-muted-foreground cursor-help" />
+                  </div>
                         <p className="text-sm text-muted-foreground" data-testid="stat-biomarkers">Biomarkers tracked</p>
                       </Card>
                     </TooltipTrigger>
@@ -227,9 +230,10 @@ export default function Home() {
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <Card className="bg-card border-card-border p-6 text-center cursor-help transition-all hover:border-primary/40 hover:shadow-[0_0_20px_rgba(220,20,60,0.15)]">
-                        <div className="mb-2 text-3xl font-bold">
-                          <GradientText>97%</GradientText>
-                        </div>
+                        <div className="flex items-center justify-center gap-2 mb-2 text-3xl font-bold">
+                    <GradientText>97%</GradientText>
+                    <Info className="h-5 w-5 text-muted-foreground cursor-help" />
+                  </div>
                         <p className="text-sm text-muted-foreground" data-testid="stat-accuracy">Protocol accuracy rate</p>
                       </Card>
                     </TooltipTrigger>
